@@ -22,6 +22,7 @@ public class UserService {
     }
 
     public UserEntity createUser(UserEntity user) {
+        user.setDateCreated(java.time.LocalDate.now());
         return userRepository.save(user);
     }
 

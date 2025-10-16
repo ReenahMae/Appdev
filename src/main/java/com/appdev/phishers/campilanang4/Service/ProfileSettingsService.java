@@ -23,6 +23,7 @@ public class ProfileSettingsService {
     }
 
     public ProfileSettingsEntity createProfileSettings(ProfileSettingsEntity profileSettings) {
+        profileSettings.setDateUpdated(java.time.LocalDate.now());
         return profileSettingsRepository.save(profileSettings);
     }
 

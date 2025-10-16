@@ -24,7 +24,7 @@ public class ProfileSettingsController {
         return profileSettingsService.getAllProfileSettings();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/read/{id}")
     public ProfileSettingsEntity getProfileSettingsById(@PathVariable Long id) {
         return profileSettingsService.getProfileSettingsById(id);
     }

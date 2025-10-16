@@ -19,7 +19,7 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/read/{id}")
     public UserEntity getUserById(@PathVariable Long id) {
         return userService.getUserById(id);
     }
@@ -29,12 +29,12 @@ public class UserController {
         return userService.createUser(user);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public UserEntity updateUser(@PathVariable Long id, @RequestBody UserEntity user) {
         return userService.updateUser(id, user);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public void deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
     }
